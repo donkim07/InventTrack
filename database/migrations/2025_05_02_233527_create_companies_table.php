@@ -14,15 +14,15 @@ return new class extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->id('company_id');
             $table->integer('owner_user_id')->nullable();
-            $table->string('name')->unique();
-            $table->string('subdomain')->unique();
-            $table->string('email')->unique();
-            $table->string('phone')->nullable();
-            $table->string('country')->nullable();
-            $table->string('address')->nullable();
-            $table->string('website')->nullable();
-            $table->string('logo_url')->nullable();
-            $table->string('description')->nullable();
+            $table->text('name')->unique();
+            $table->text('subdomain')->unique();
+            $table->text('email')->unique();
+            $table->text('phone')->nullable();
+            $table->text('country')->nullable();
+            $table->text('address')->nullable();
+            $table->text('website')->nullable();
+            $table->text('logo_url')->nullable();
+            $table->text('description')->nullable();
             $table->date('license_expiry_date')->nullable();
             $table->string('payment_status')->nullable();
             $table->string('status')->default('active');
