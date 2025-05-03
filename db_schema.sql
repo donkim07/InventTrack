@@ -17,17 +17,21 @@ CREATE TABLE users (
 -- ii. Companies
 CREATE TABLE companies (
     company_id UUID PRIMARY KEY,
+    owner_user_id UUID,
     name VARCHAR(255) NOT NULL,
     subdomain VARCHAR(255) UNIQUE NOT NULL, -- tenant-specific URL prefix (e.g. "acme" makes acme.yourpos.com), isolates tenant data and branding
     -- Subdomain allows each company to have its own dedicated URL within the SaaS platform
-    logo_url TEXT,
-    website TEXT,
     phone VARCHAR(20),
     email VARCHAR(255),
+    country VARCHAR(30),
+    address TEXT,
+    website TEXT,
+    logo_url TEXT,
+    description TEXT,
     license_expiry_date DATE,
     payment_status VARCHAR(50),
+    status VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    owner_user_id UUID,
     FOREIGN KEY (owner_user_id) REFERENCES users(user_id)
 );
 
