@@ -22,10 +22,7 @@ return new class extends Migration
             $table->text('address')->nullable();
             $table->text('website')->nullable();
             $table->text('logo_url')->nullable();
-            $table->text('description')->nullable();
-            $table->date('license_expiry_date')->nullable();
-            $table->string('payment_status')->nullable();
-            $table->string('status')->default('active');
+
             $table->timestamps();
             $table->softDeletes();
         });
