@@ -34,9 +34,7 @@ class CompanyController extends AdminController
         $grid->column('phone', __('Phone'));
         $grid->column('country', __('Country'));
         $grid->column('address', __('Address'));
-        $grid->column('website', __('Website'));
-        $grid->column('logo_url', __('Logo url'));
-        $grid->column('description', __('Description'));
+
         $grid->column('license_expiry_date', __('License expiry date'));
         $grid->column('payment_status', __('Payment status'));
         $grid->column('status', __('Status'));
