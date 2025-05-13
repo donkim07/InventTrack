@@ -9,5 +9,8 @@ class Company extends Model
     protected $fillable = [
         'name'
         // Add other fillable fields
+        // 'owner_user_id',
+        // 'subdomain',
+        // 'email',
     ];
 }
