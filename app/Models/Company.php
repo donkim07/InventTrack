@@ -13,5 +13,13 @@ class Company extends Model
         'subdomain',
         'email',
         'phone',
+        'country',
+        'address',
+        'website',
+        'logo_url',
+        'description',
+        'license_expiry_date',
+        'payment_status',
+        'status',
     ];
 }
